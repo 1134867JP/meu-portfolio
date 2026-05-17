@@ -81,14 +81,14 @@ const experiences = [
 export default function Experience() {
   const { copy, lang } = useLanguage();
   return (
-    <section id="experiencia" className="py-28 px-6 lg:px-10 relative">
+    <section id="experiencia" className="py-16 md:py-28 px-6 lg:px-10 relative">
       <div className="max-w-7xl mx-auto">
         <motion.p
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-mono text-xs uppercase tracking-[0.3em] text-zinc-500 mb-16 flex items-center gap-3"
+          className="font-mono text-xs uppercase tracking-[0.3em] text-zinc-500 mb-8 md:mb-16 flex items-center gap-3"
         >
           <span className="w-8 h-px bg-gradient-to-r from-purple-500 to-cyan-500" />
           [ {copy.experience.label} ]
@@ -97,7 +97,7 @@ export default function Experience() {
         <div className="relative pl-8">
           <div className="timeline-line" />
 
-          <div className="space-y-14">
+          <div className="space-y-10 md:space-y-14">
             {experiences.map((exp, i) => (
               <motion.div
                 key={i}
@@ -125,7 +125,7 @@ export default function Experience() {
                     </div>
                     <div className="md:col-span-3">
                       <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                        <h3 className="text-xl font-semibold text-white">
+                        <h3 className="text-base md:text-xl font-semibold text-white">
                           {exp.role?.[lang] || exp.role?.pt || exp.role}
                         </h3>
                         <span className="text-zinc-500 text-sm">

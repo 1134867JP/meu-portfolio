@@ -56,20 +56,20 @@ export default function About() {
   const { copy } = useLanguage();
 
   return (
-    <section id="sobre" className="py-32 px-6 lg:px-10 relative">
+    <section id="sobre" className="py-16 md:py-32 px-6 lg:px-10 relative">
       <div className="max-w-7xl mx-auto">
         <motion.p
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-mono text-xs uppercase tracking-[0.3em] text-zinc-500 mb-16 flex items-center gap-3"
+          className="font-mono text-xs uppercase tracking-[0.3em] text-zinc-500 mb-8 md:mb-16 flex items-center gap-3"
         >
           <span className="w-8 h-px bg-gradient-to-r from-lime-400 to-emerald-400" />
           [ {copy.about.label} ]
         </motion.p>
 
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-start">
           {/* Bio */}
           <motion.div
             ref={ref}
@@ -79,7 +79,7 @@ export default function About() {
           >
             <motion.h2
               variants={itemVariants}
-              className="text-4xl md:text-5xl font-light tracking-tight mb-8 leading-snug"
+              className="text-3xl md:text-5xl font-light tracking-tight mb-6 md:mb-8 leading-snug"
             >
               {copy.about.titleBefore}
               <span className="gradient-text font-semibold">
@@ -90,7 +90,7 @@ export default function About() {
 
             <motion.p
               variants={itemVariants}
-              className="text-zinc-400 text-lg leading-relaxed mb-5"
+              className="text-zinc-400 text-base md:text-lg leading-relaxed mb-5"
             >
               {copy.about.p1Before}
               <span className="text-white font-medium">

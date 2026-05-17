@@ -64,7 +64,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-24 px-6 lg:px-10 overflow-hidden"
+      className="relative py-14 md:py-24 px-6 lg:px-10 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section label */}
@@ -73,7 +73,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-mono text-xs uppercase tracking-[0.3em] text-zinc-500 mb-8 flex items-center gap-3"
+          className="font-mono text-xs uppercase tracking-[0.3em] text-zinc-500 mb-6 md:mb-8 flex items-center gap-3"
         >
           <span className="w-8 h-px bg-gradient-to-r from-lime-400 to-emerald-400" />
           [ {copy.skills.label} ]
@@ -85,9 +85,9 @@ export default function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight mb-5">
+          <h2 className="text-2xl md:text-4xl font-semibold text-white leading-tight mb-4 md:mb-5">
             {copy.skills.heading}
           </h2>
 
@@ -97,7 +97,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Skills */}
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {Object.entries(skills).map(([category, items]) => (
             <motion.div
               key={category}
