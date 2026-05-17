@@ -36,7 +36,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center px-6 lg:px-10 pt-24 pb-14 overflow-hidden"
+      className="relative min-h-screen flex items-center px-6 lg:px-10 pt-20 md:pt-24 pb-10 md:pb-14 overflow-hidden"
     >
       {/* Decorative grid */}
       <div
@@ -127,7 +127,7 @@ export default function Hero() {
           variants={revealVariants}
           initial="hidden"
           animate="visible"
-          className="mt-6 text-lg text-zinc-400 font-light leading-relaxed max-w-2xl mx-auto"
+          className="mt-6 text-base md:text-lg text-zinc-400 font-light leading-relaxed max-w-2xl mx-auto"
         >
           {copy.hero.description.intro}
           <span className="text-white font-medium">

@@ -140,7 +140,7 @@ function ProjectItem({
       onClick={() => setHoveredIndex(isHovered ? null : index)}
     >
       <GlowCard glowColor="rgba(35, 214, 134, 0.08)">
-        <div className="relative py-10 px-6 lg:px-10 max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between group cursor-pointer">
+        <div className="relative py-6 md:py-10 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between group cursor-pointer">
           {/* Left gradient accent */}
           <motion.div
             className="absolute left-0 top-0 bottom-0 w-px"
@@ -167,7 +167,7 @@ function ProjectItem({
                 </span>
               </div>
               <h3
-                className="text-3xl lg:text-5xl font-light tracking-tight text-white"
+                className="text-2xl md:text-3xl lg:text-5xl font-light tracking-tight text-white"
                 style={{
                   transform: isHovered ? "translateX(12px)" : "translateX(0)",
                   transition: "transform 0.5s cubic-bezier(0.16,1,0.3,1)",
@@ -280,8 +280,8 @@ export default function Projects() {
   const { copy, lang } = useLanguage();
 
   return (
-    <section id="projetos" className="pt-28 pb-32">
-      <div className="px-6 lg:px-10 max-w-7xl mx-auto mb-16">
+    <section id="projetos" className="pt-16 md:pt-28 pb-20 md:pb-32">
+      <div className="px-6 lg:px-10 max-w-7xl mx-auto mb-10 md:mb-16">
         <motion.p
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -298,7 +298,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-3xl md:text-5xl font-light tracking-tight max-w-2xl leading-snug"
+          className="text-2xl md:text-5xl font-light tracking-tight max-w-2xl leading-snug"
         >
           {copy.projects.heading}
         </motion.p>

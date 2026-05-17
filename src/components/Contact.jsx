@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <section
       id="contato"
-      className="pt-28 pb-16 px-6 lg:px-10 relative overflow-hidden"
+      className="pt-16 pb-16 px-6 lg:px-10 md:pt-28 relative overflow-hidden"
     >
       {/* Radial bg accent */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -62,7 +62,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-6xl md:text-9xl font-black tracking-tighter mb-6 leading-none"
+          className="text-4xl sm:text-6xl md:text-9xl font-black tracking-tighter mb-6 leading-none"
         >
           {copy.contact.headingLine1}
           <br />
@@ -74,7 +74,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-zinc-500 text-lg mb-4 max-w-lg mx-auto leading-relaxed"
+          className="text-zinc-500 text-base md:text-lg mb-4 max-w-lg mx-auto leading-relaxed"
         >
           {copy.contact.blurb}
         </motion.p>
