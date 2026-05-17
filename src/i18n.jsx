@@ -18,10 +18,9 @@ const translations = {
       lineThree: ["Desenvolvedor"],
       highlight: "Desenvolvedor",
       description: {
-        intro: "Desenvolvedor FullStack focado em ",
-        highlight: "entregar resultados reais",
-        outro:
-          ". Especializado em sistemas de grande escala para logística, agronegócio e gestão de frotas, transformando dados complexos em processos eficientes e confiáveis.",
+        intro: "FullStack Developer. ",
+        highlight: "PHP, Laravel e PostgreSQL",
+        outro: " — backend sólido, sistemas que escalam.",
       },
       availability: "Disponível para novos projetos · Passo Fundo, RS",
       ctaPrimary: "Entrar em Contato",
@@ -103,10 +102,9 @@ const translations = {
       lineThree: ["Developer"],
       highlight: "Developer",
       description: {
-        intro: "FullStack developer focused on ",
-        highlight: "PHP, Laravel, and PostgreSQL",
-        outro:
-          ". I build products that blend technical clarity, visual rhythm, and production-ready code.",
+        intro: "FullStack Developer. ",
+        highlight: "PHP, Laravel & PostgreSQL",
+        outro: " — solid backend, systems that scale.",
       },
       availability: "Open for new projects · Passo Fundo, Brazil",
       ctaPrimary: "Get in touch",
