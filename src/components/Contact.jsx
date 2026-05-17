@@ -79,15 +79,21 @@ export default function Contact() {
           {copy.contact.blurb}
         </motion.p>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="font-mono text-sm text-zinc-600 mb-14"
+          className="font-mono text-xs md:text-sm text-zinc-600 mb-8 md:mb-14 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3"
         >
-          joaorodrigues.freela@gmail.com · (54) 9843-69987
-        </motion.p>
+          <a href="mailto:joaorodrigues.freela@gmail.com" className="hover:text-white transition-colors">
+            joaorodrigues.freela@gmail.com
+          </a>
+          <span className="hidden md:inline">·</span>
+          <a href="tel:+5554984369987" className="hover:text-white transition-colors">
+            (54) 9843-69987
+          </a>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
