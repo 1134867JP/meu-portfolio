@@ -91,7 +91,7 @@ const projects = [
     year: { pt: "Online", en: "Live" },
     categoryKey: "institutional",
     link: "https://cljdiocesevacaria.com.br/",
-    preview: false,
+    preview: true,
   },
 ];
 
