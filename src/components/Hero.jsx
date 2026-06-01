@@ -187,24 +187,6 @@ export default function Hero() {
               </svg>
             </a>
           </Magnetic>
-          <Magnetic strength={20}>
-            <a
-              href="/cv.pdf"
-              download
-              className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-zinc-500 hover:text-white transition-colors py-2"
-            >
-              {copy.hero.ctaCV}
-              <svg
-                className="w-3 h-3"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-              </svg>
-            </a>
-          </Magnetic>
         </motion.div>
         {/* Scroll indicator */}
         <motion.div

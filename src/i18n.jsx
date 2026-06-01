@@ -25,7 +25,6 @@ const translations = {
       availability: "Disponível para novos projetos · Passo Fundo, RS",
       ctaPrimary: "Entrar em Contato",
       ctaSecondary: "Ver projetos",
-      ctaCV: "Baixar CV",
       scrollLabel: "Role",
     },
     about: {
@@ -119,7 +118,6 @@ const translations = {
       availability: "Open for new projects · Passo Fundo, Brazil",
       ctaPrimary: "Get in touch",
       ctaSecondary: "See projects",
-      ctaCV: "Download CV",
       scrollLabel: "Scroll",
     },
     about: {
