@@ -94,9 +94,11 @@ function ContactForm({ copy }) {
         disabled={status === "sending" || status === "success"}
         className="cta-button w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white font-mono text-sm uppercase tracking-widest disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === "sending"
-          ? copy.contact.form.sending
-          : copy.contact.form.send}
+        <span className="relative z-10">
+          {status === "sending"
+            ? copy.contact.form.sending
+            : copy.contact.form.send}
+        </span>
       </button>
       {status === "success" && (
         <p className="mt-3 text-center text-sm text-lime-400 font-mono">
@@ -199,8 +201,10 @@ export default function Contact() {
               whileTap={{ scale: 0.97 }}
               className="cta-button inline-flex items-center gap-3 px-10 py-4 rounded-full text-white font-mono text-sm uppercase tracking-widest relative z-0"
             >
-              <WhatsAppIcon />
-              <span className="relative z-10">{copy.contact.cta}</span>
+              <span className="relative z-10 flex items-center gap-3">
+                <WhatsAppIcon />
+                {copy.contact.cta}
+              </span>
             </motion.a>
           </Magnetic>
 
