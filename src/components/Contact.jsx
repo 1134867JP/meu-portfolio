@@ -4,7 +4,7 @@ import Magnetic from "./Magnetic";
 import { useLanguage } from "../i18n";
 
 // Replace with your Formspree form ID: https://formspree.io/f/YOUR_FORM_ID
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdajqake";
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
