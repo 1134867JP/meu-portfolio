@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import GlowCard from "./GlowCard";
 import { useLanguage } from "../i18n";
 
@@ -180,94 +180,91 @@ function ProjectItem({
 
           {/* Right — expandable */}
           <div className="lg:w-[45%]">
-            <AnimatePresence mode="wait">
-              {isHovered ? (
-                <motion.div
-                  key="open"
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                  className="overflow-hidden"
-                >
-                  {project.preview && (
-                    <div className="mb-6 rounded-xl overflow-hidden border border-zinc-800/50 bg-[#0a0a0a] relative w-full aspect-video mt-4 group/preview">
-                      <div className="absolute inset-0 bg-zinc-900/60 flex items-center justify-center opacity-0 group-hover/preview:opacity-100 transition-opacity duration-300 z-10 pointer-events-none">
-                        <span className="text-white font-mono text-xs uppercase tracking-widest bg-zinc-800/90 px-4 py-2 rounded-full backdrop-blur-sm border border-zinc-700/50">
-                          {copy.projects?.previewLabel || "Preview"}
-                        </span>
-                      </div>
-                      <iframe
-                        src={project.link}
-                        title={title}
-                        className="absolute top-0 left-0 origin-top-left pointer-events-none bg-[#0a0a0a]"
-                        style={{
-                          width: "400%",
-                          height: "400%",
-                          transform: "scale(0.25)"
-                        }}
-                        tabIndex="-1"
-                      />
-                    </div>
-                  )}
-                  <p className="text-zinc-400 text-base mb-5 leading-relaxed lg:text-right">
-                    {description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 lg:justify-end">
-                    {techList.map((t, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 text-xs font-mono border border-zinc-800 rounded-full text-zinc-300 bg-zinc-900/50"
-                      >
-                        {t}
-                      </span>
-                    ))}
+            {/* "Details hint" shown when not hovered */}
+            <motion.div
+              animate={{ opacity: isHovered ? 0 : 1 }}
+              transition={{ duration: 0.2 }}
+              className="flex lg:justify-end items-center gap-2 text-zinc-600 text-xs font-mono uppercase tracking-widest mt-4 lg:mt-0"
+              style={{ pointerEvents: isHovered ? "none" : "auto" }}
+            >
+              {copy.projects.detailsHint}
+              <svg
+                className="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </motion.div>
+
+            {/* Expanded content — always mounted, animated with CSS height */}
+            <motion.div
+              initial={false}
+              animate={{ opacity: isHovered ? 1 : 0, height: isHovered ? "auto" : 0 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="overflow-hidden"
+              style={{ pointerEvents: isHovered ? "auto" : "none" }}
+            >
+              {project.preview && (
+                <div className="mb-6 rounded-xl overflow-hidden border border-zinc-800/50 bg-[#0a0a0a] relative w-full aspect-video mt-4 group/preview">
+                  <div className="absolute inset-0 bg-zinc-900/60 flex items-center justify-center opacity-0 group-hover/preview:opacity-100 transition-opacity duration-300 z-10 pointer-events-none">
+                    <span className="text-white font-mono text-xs uppercase tracking-widest bg-zinc-800/90 px-4 py-2 rounded-full backdrop-blur-sm border border-zinc-700/50">
+                      {copy.projects?.previewLabel || "Preview"}
+                    </span>
                   </div>
-                  {project.link ? (
-                    <div className="mt-4 lg:flex lg:justify-end">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-zinc-400 hover:text-white transition-colors"
-                        data-hover
-                      >
-                        {copy.projects.visit}
-                        <svg
-                          className="w-3 h-3"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path d="M7 17L17 7" />
-                          <path d="M8 7h9v9" />
-                        </svg>
-                      </a>
-                    </div>
-                  ) : null}
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="closed"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="flex lg:justify-end items-center gap-2 text-zinc-600 text-xs font-mono uppercase tracking-widest mt-4 lg:mt-0"
-                >
-                  {copy.projects.detailsHint}
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </motion.div>
+                  <iframe
+                    src={project.link}
+                    title={title}
+                    className="absolute top-0 left-0 origin-top-left pointer-events-none bg-[#0a0a0a]"
+                    style={{
+                      width: "400%",
+                      height: "400%",
+                      transform: "scale(0.25)"
+                    }}
+                    tabIndex="-1"
+                    loading="eager"
+                  />
+                </div>
               )}
-            </AnimatePresence>
+              <p className="text-zinc-400 text-base mb-5 leading-relaxed lg:text-right">
+                {description}
+              </p>
+              <div className="flex flex-wrap gap-2 lg:justify-end">
+                {techList.map((t, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 text-xs font-mono border border-zinc-800 rounded-full text-zinc-300 bg-zinc-900/50"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+              {project.link ? (
+                <div className="mt-4 lg:flex lg:justify-end">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-zinc-400 hover:text-white transition-colors"
+                    data-hover
+                  >
+                    {copy.projects.visit}
+                    <svg
+                      className="w-3 h-3"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M7 17L17 7" />
+                      <path d="M8 7h9v9" />
+                    </svg>
+                  </a>
+                </div>
+              ) : null}
+            </motion.div>
           </div>
         </div>
       </GlowCard>
