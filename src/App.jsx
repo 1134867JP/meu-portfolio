@@ -11,6 +11,13 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 
+const prefersReducedMotion =
+  typeof window !== "undefined" &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const isMobile =
+  typeof window !== "undefined" && window.innerWidth < 768;
+
 // Stable particle data — generated once, never re-randomized
 const PARTICLE_DATA = (() => {
   const colors = ["#7dff7a", "#23d686", "#4dff9a", "#1fd67a", "#9bff6b"];
@@ -86,7 +93,7 @@ export default function App() {
         />
         <div className="ambient-glow ambient-glow-1" />
         <div className="ambient-glow ambient-glow-2" />
-        <Particles />
+        {!prefersReducedMotion && !isMobile && <Particles />}
 
         {/* Cursor & progress — only renders on hover-capable devices via CSS */}
         <CustomCursor />

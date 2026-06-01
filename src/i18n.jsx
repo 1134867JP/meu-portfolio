@@ -39,7 +39,7 @@ const translations = {
       p3: "Estudo Ciências da Computação na ATITUS Educação (noturno). Aprendo rápido, comunico bem e sou autoconfiante diante de desafios.",
       stats: {
         devYears: "Anos em desenvolvimento",
-        proYears: "Anos de experiência profissional",
+        proYears: "Anos de experiência em TI",
         stackCount: "Tecnologias no stack",
         age: "Anos de idade",
       },
@@ -80,6 +80,15 @@ const translations = {
       blurb:
         "Aberto a novos projetos, oportunidades e conversas sobre tecnologia.",
       cta: "Chamar no WhatsApp",
+      form: {
+        name: "Seu nome",
+        email: "Seu e-mail",
+        message: "Sua mensagem",
+        send: "Enviar mensagem",
+        sending: "Enviando...",
+        success: "Mensagem enviada! Retorno em breve.",
+        error: "Algo deu errado. Tente novamente.",
+      },
     },
     splash: {
       loading: "Inicializando",
@@ -125,7 +134,7 @@ const translations = {
       p3: "I study Computer Science at ATITUS Educação (evening). I learn fast, communicate clearly, and stay confident through challenges.",
       stats: {
         devYears: "Years building",
-        proYears: "Years of professional experience",
+        proYears: "Years in IT",
         stackCount: "Technologies in stack",
         age: "Years old",
       },
@@ -166,6 +175,15 @@ const translations = {
       blurb:
         "Open to new projects, opportunities, and conversations about technology.",
       cta: "WhatsApp me",
+      form: {
+        name: "Your name",
+        email: "Your email",
+        message: "Your message",
+        send: "Send message",
+        sending: "Sending...",
+        success: "Message sent! I'll get back to you soon.",
+        error: "Something went wrong. Please try again.",
+      },
     },
     splash: {
       loading: "Loading",
