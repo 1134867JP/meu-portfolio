@@ -55,7 +55,7 @@ function ContactForm({ copy }) {
   };
 
   const inputClass =
-    "w-full bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-lime-400/50 transition-colors font-mono";
+    "w-full bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 py-3 text-base text-white placeholder:text-zinc-600 focus:outline-none focus:border-lime-400/50 transition-colors font-mono";
 
   return (
     <motion.form
