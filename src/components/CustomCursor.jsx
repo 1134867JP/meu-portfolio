@@ -27,21 +27,24 @@ export default function CustomCursor() {
       y.set(e.clientY);
     };
 
-    const addHoverListeners = () => {
-      document.querySelectorAll("a, button, [data-hover]").forEach((el) => {
+    const attachListeners = (root) => {
+      root.querySelectorAll("a, button, [data-hover]").forEach((el) => {
+        if (el.__cursorBound) return;
+        el.__cursorBound = true;
         el.addEventListener("mouseenter", () => setHovered(true));
         el.addEventListener("mouseleave", () => setHovered(false));
       });
     };
 
     window.addEventListener("mousemove", onMove);
-    // Run once DOM settles, and again after any dynamic content
-    addHoverListeners();
-    const timer = setInterval(addHoverListeners, 2000);
+    attachListeners(document);
+
+    const observer = new MutationObserver(() => attachListeners(document));
+    observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
       window.removeEventListener("mousemove", onMove);
-      clearInterval(timer);
+      observer.disconnect();
     };
   }, [x, y]);
 

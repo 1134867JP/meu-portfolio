@@ -1,16 +1,40 @@
-# React + Vite
+# João Pedro — Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal de João Pedro Rodrigues, Desenvolvedor FullStack com foco em PHP, Laravel e PostgreSQL.
 
-Currently, two official plugins are available:
+**Live:** [joaopedrodev.com.br](https://joaopedrodev.com.br)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **React 19** + **Vite** — SPA com HMR
+- **Tailwind CSS 3** — estilização utilitária
+- **Framer Motion** — animações e interações
+- **GitHub Pages** — deploy automático via GitHub Actions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Seções
 
-## Expanding the ESLint configuration
+- Hero, Sobre, Skills, Projetos, Experiência, Contato
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Desenvolvimento
+
+```bash
+npm install
+npm run dev      # servidor de desenvolvimento
+npm run build    # build para produção
+npm run preview  # preview do build
+```
+
+## Deploy
+
+Push para `main` ou `master` dispara o workflow em `.github/workflows/deploy.yml`, que faz build e publica no GitHub Pages automaticamente.
+
+## Configuração do formulário de contato
+
+O formulário usa [Formspree](https://formspree.io). Para ativar:
+
+1. Crie uma conta em formspree.io e crie um novo form
+2. Substitua `YOUR_FORM_ID` em `src/components/Contact.jsx` pelo ID gerado
+
+## CV
+
+Coloque o arquivo `cv.pdf` na pasta `public/` para ativar o botão de download.

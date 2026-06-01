@@ -31,7 +31,7 @@ function AnimatedCounter({ target, suffix = "" }) {
 
 const stats = [
   { value: 2, suffix: "+", key: "devYears" },
-  { value: 8, suffix: "+", key: "proYears" },
+  { value: 3, suffix: "+", key: "proYears" },
   { value: 12, suffix: "+", key: "stackCount" },
   { value: 21, suffix: "", key: "age" },
 ];
