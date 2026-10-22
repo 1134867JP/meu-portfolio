@@ -5,19 +5,19 @@ import { useLanguage } from "../i18n";
 
 const projects = [
   {
-    id: "cargohub",
-    title: { pt: "CargoHub", en: "CargoHub" },
+    id: "cereaissaoluis",
+    title: { pt: "Cereais São Luís", en: "Cereais São Luís" },
     description: {
-      pt: "Sistema web de gerenciamento de fretes com agendamento de cargas/descargas, controle operacional, reservas de horários, gestão de clientes e integração com WhatsApp.",
-      en: "Web system for freight management with loading/unloading scheduling, operational control, time slot reservations, customer management, and WhatsApp integration.",
+      pt: "Site institucional para empresa de grãos com cotação diária, catálogo de grãos com orçamento via WhatsApp, estrutura de armazenagem, FAQ e formulário de trabalhe conosco.",
+      en: "Institutional site for a grain company with daily price quotes, a grain catalog with WhatsApp quote requests, storage facilities, FAQ, and a careers form.",
     },
     tech: {
-      pt: ["Sistema", "Logística", "Dashboard"],
-      en: ["System", "Logistics", "Dashboard"],
+      pt: ["Website", "Cotação", "WhatsApp"],
+      en: ["Website", "Price Quotes", "WhatsApp"],
     },
-    year: { pt: "Desenvolvendo", en: "Developing" },
-    categoryKey: "system",
-    link: "https://72.60.254.178.nip.io/login",
+    year: { pt: "Online", en: "Live" },
+    categoryKey: "institutional",
+    link: "https://cereaissaoluis.com.br/",
     preview: true,
   },
   {
