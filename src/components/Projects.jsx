@@ -21,6 +21,25 @@ const projects = [
     preview: true,
   },
   {
+    id: "cereaissaoluis-gestao",
+    title: {
+      pt: "Cereais São Luís — Gestão",
+      en: "Cereais São Luís — Management",
+    },
+    description: {
+      pt: "Sistema web de gestão financeira interna da Cereais São Luís, com controle de lançamentos, acompanhamento de contas e painel administrativo.",
+      en: "Internal web financial management system for Cereais São Luís, with transaction control, account tracking, and an admin dashboard.",
+    },
+    tech: {
+      pt: ["Sistema", "Financeiro", "Dashboard"],
+      en: ["System", "Finance", "Dashboard"],
+    },
+    year: { pt: "Online", en: "Live" },
+    categoryKey: "system",
+    link: "https://financeiro.cereaissaoluis.com.br/",
+    preview: true,
+  },
+  {
     id: "thamires",
     title: {
       pt: "Thamires Camargo",
