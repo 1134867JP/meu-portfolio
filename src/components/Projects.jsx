@@ -21,6 +21,23 @@ const projects = [
     preview: true,
   },
   {
+    id: "cereaissaoluis-gestao",
+    title: {
+      pt: "Cereais São Luís — Gestão",
+      en: "Cereais São Luís — Management",
+    },
+    description: {
+      pt: "Sistema web de gestão interna para a Cereais São Luís, com controle operacional, agendamento de cargas e descargas, gestão de clientes e painel administrativo.",
+      en: "Internal web management system for Cereais São Luís, with operational control, loading/unloading scheduling, customer management, and an admin dashboard.",
+    },
+    tech: {
+      pt: ["Sistema", "Gestão", "Dashboard"],
+      en: ["System", "Management", "Dashboard"],
+    },
+    year: { pt: "Desenvolvendo", en: "Developing" },
+    categoryKey: "system",
+  },
+  {
     id: "thamires",
     title: {
       pt: "Thamires Camargo",
